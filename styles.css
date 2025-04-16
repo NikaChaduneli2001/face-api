@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#status {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.video-container {
+    position: relative;
+    margin: 0 auto;
+    width: 720px;
+    height: 560px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+video, canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(-1); /* Mirror effect */
+}
+
+.emotion-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#emotion-status {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#emotion {
+    color: #e74c3c;
+}
+
+#anger-meter {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.meter-label {
+    width: 120px;
+}
+
+.meter {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.meter-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
+}
+
+#anger-value {
+    width: 40px;
+    text-align: right;
+}
+
+.sound-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn.enabled {
+    background-color: #2ecc71;
+}
+
+#sound-status {
+    font-weight: bold;
+} 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detector</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js@master/dist/face-api.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotion Detector</h1>
+        <p id="status">Loading models...</p>
+        <div class="sound-controls">
+            <button id="enable-sound" class="btn">Enable Sound</button>
+            <span id="sound-status">Sound: Disabled</span>
+        </div>
+        <div class="video-container">
+            <video id="video" width="720" height="560" autoplay muted></video>
+            <canvas id="overlay" width="720" height="560"></canvas>
+        </div>
+        <div class="emotion-container">
+            <div id="emotion-status">Emotion: <span id="emotion">analyzing...</span></div>
+            <div id="anger-meter">
+                <div class="meter-label">Anger Level:</div>
+                <div class="meter">
+                    <div id="anger-bar" class="meter-bar"></div>
+                </div>
+                <div id="anger-value">0%</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Audio for anger sound -->
+    <audio id="anger-sound" preload="auto">
+        <source src="https://cdn.jsdelivr.net/gh/freeCodeCamp/cdn/build/testable-projects-fcc/audio/BeepSound.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html> 
